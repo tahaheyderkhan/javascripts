@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Math Expressions in JavaScript</title>
+</head>
+<body>
+  <h1>JavaScript Math Expressions</h1>
+  <script>
+    // Task 1-13 are above here...
+
+    // Task 14: City Greeting
+    var city = prompt("Enter your city name:");
+    if (city.toLowerCase() === "karachi") {
+      alert("Welcome to city of lights");
+    }
+
+    // Task 15: Gender Greeting
+    var gender = prompt("Enter your gender (male/female):");
+    if (gender.toLowerCase() === "male") {
+      alert("Good Morning Sir.");
+    } else if (gender.toLowerCase() === "female") {
+      alert("Good Morning Ma’am.");
+    }
+
+    // Task 16: Traffic Signal
+    var signal = prompt("Enter traffic signal color:");
+    if (signal.toLowerCase() === "red") {
+      alert("Must Stop");
+    } else if (signal.toLowerCase() === "yellow") {
+      alert("Ready to move");
+    } else if (signal.toLowerCase() === "green") {
+      alert("Move now");
+    }
+
+    // Task 17: Fuel Check
+    var fuel = parseFloat(prompt("Enter remaining fuel in litres:"));
+    if (fuel < 0.25) {
+      alert("Please refill the fuel in your car");
+    }
+
+    // Task 18: Condition Testing
+    var a = 4;
+    if (++a === 5){ alert("given condition for variable a is true"); }
+
+    var b = 82;
+    if (b++ === 83){ alert("given condition for variable b is true"); }
+
+    var c = 12;
+    if (c++ === 13){ alert("condition 1 is true"); }
+    if (c === 13){ alert("condition 2 is true"); }
+    if (++c < 14){ alert("condition 3 is true"); }
+    if (c === 14){ alert("condition 4 is true"); }
+
+    var materialCost = 20000;
+    var laborCost = 2000;
+    var totalCost = materialCost + laborCost;
+    if (totalCost === laborCost + materialCost){ alert("The cost equals"); }
+
+    if (true){ alert("True"); }
+    if (false){ alert("False"); }
+
+    if ("car" < "cat"){ alert("car is smaller than cat"); }
+
+    // Task 19: Grading System
+    var sub1 = +prompt("Enter marks for subject 1:");
+    var sub2 = +prompt("Enter marks for subject 2:");
+    var sub3 = +prompt("Enter marks for subject 3:");
+    var totalMarks = +prompt("Enter total marks:");
+    var obtainedMarks = sub1 + sub2 + sub3;
+    var percentage = (obtainedMarks / totalMarks) * 100;
+    var grade, remarks;
+
+    if (percentage >= 80) {
+      grade = "A-one"; remarks = "Excellent";
+    } else if (percentage >= 70) {
+      grade = "A"; remarks = "Good";
+    } else if (percentage >= 60) {
+      grade = "B"; remarks = "You need to improve";
+    } else {
+      grade = "Fail"; remarks = "Sorry";
+    }
+
+    document.write("<h3>Total Marks: " + totalMarks + "</h3>");
+    document.write("<h3>Marks Obtained: " + obtainedMarks + "</h3>");
+    document.write("<h3>Percentage: " + percentage.toFixed(2) + "%</h3>");
+    document.write("<h3>Grade: " + grade + "</h3>");
+    document.write("<h3>Remarks: " + remarks + "</h3>");
+
+    // Task 20: Guess Game
+    var secret = 7;
+    var guess = +prompt("Guess the secret number (1-10):");
+    if (guess === secret) {
+      alert("Bingo! Correct answer");
+    } else if (guess + 1 === secret) {
+      alert("Close enough to the correct answer");
+    }
+
+    // Task 21: Divisible by 3
+    var num = +prompt("Enter a number:");
+    if (num % 3 === 0) {
+      alert("The number is divisible by 3");
+    }
+
+    // Task 22: Even or Odd
+    var inputNum = +prompt("Enter a number:");
+    if (inputNum % 2 === 0) {
+      alert("Even number");
+    } else {
+      alert("Odd number");
+    }
+
+    // Task 23: Temperature Message
+    var temp = +prompt("Enter temperature:");
+    if (temp > 40) {
+      alert("It is too hot outside.");
+    } else if (temp > 30) {
+      alert("The Weather today is Normal.");
+    } else if (temp > 20) {
+      alert("Today’s Weather is cool.");
+    } else if (temp > 10) {
+      alert("OMG! Today’s weather is so Cool.");
+    }
+
+    // Task 24: Simple Calculator
+    var firstNum = +prompt("Enter first number:");
+    var secondNum = +prompt("Enter second number:");
+    var operation = prompt("Enter operation (+, -, *, /, %):");
+    var result;
+
+    if (operation === "+") {
+      result = firstNum + secondNum;
+    } else if (operation === "-") {
+      result = firstNum - secondNum;
+    } else if (operation === "*") {
+      result = firstNum * secondNum;
+    } else if (operation === "/") {
+      result = firstNum / secondNum;
+    } else if (operation === "%") {
+      result = firstNum % secondNum;
+    } else {
+      result = "Invalid operation";
+    }
+    alert("Result: " + result);
+
+  </script>
+</body>
+</html>
