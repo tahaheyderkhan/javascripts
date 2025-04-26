@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple JavaScript Array Practice</title>
+</head>
+<body>
+
+<h2>JavaScript Arrays Practice (No Loops)</h2>
+
+<!-- 1. Empty array (literal) -->
+<script>
+  var studentNames = [];
+  document.write("<h3>1. Empty Array (Literal):</h3>" + studentNames + "<br>");
+</script>
+
+<!-- 2. Empty array (object) -->
+<script>
+  var studentNames2 = new Array();
+  document.write("<h3>2. Empty Array (Object):</h3>" + studentNames2 + "<br>");
+</script>
+
+<!-- 3. Strings array -->
+<script>
+  var fruits = ["apple", "banana", "mango"];
+  document.write("<h3>3. Strings Array:</h3>" + fruits[0] + ", " + fruits[1] + ", " + fruits[2] + "<br>");
+</script>
+
+<!-- 4. Numbers array -->
+<script>
+  var numbers = [1, 2, 3];
+  document.write("<h3>4. Numbers Array:</h3>" + numbers[0] + ", " + numbers[1] + ", " + numbers[2] + "<br>");
+</script>
+
+<!-- 5. Boolean array -->
+<script>
+  var flags = [true, false, true];
+  document.write("<h3>5. Boolean Array:</h3>" + flags[0] + ", " + flags[1] + ", " + flags[2] + "<br>");
+</script>
+
+<!-- 6. Mixed array -->
+<script>
+  var mixed = ["Ali", 18, true];
+  document.write("<h3>6. Mixed Array:</h3>" + mixed[0] + ", " + mixed[1] + ", " + mixed[2] + "<br>");
+</script>
+
+<!-- 7. Education list -->
+<script>
+  var education = ["SSC", "HSC", "BCS", "BS", "BCOM", "MS", "M.Phil", "PhD"];
+  document.write("<h3>7. Education Qualifications:</h3>");
+  document.write("1) " + education[0] + "<br>");
+  document.write("2) " + education[1] + "<br>");
+  document.write("3) " + education[2] + "<br>");
+  document.write("4) " + education[3] + "<br>");
+  document.write("5) " + education[4] + "<br>");
+  document.write("6) " + education[5] + "<br>");
+  document.write("7) " + education[6] + "<br>");
+  document.write("8) " + education[7] + "<br>");
+</script>
+
+<!-- 8. Student scores -->
+<script>
+  var names = ["Ali", "Sara", "Ahmed"];
+  var scores = [400, 350, 450];
+  var total = 500;
+
+  document.write("<h3>8. Student Scores:</h3>");
+  document.write("Score of " + names[0] + " is " + scores[0] + ". Percentage: " + (scores[0]/total)*100 + "%<br>");
+  document.write("Score of " + names[1] + " is " + scores[1] + ". Percentage: " + (scores[1]/total)*100 + "%<br>");
+  document.write("Score of " + names[2] + " is " + scores[2] + ". Percentage: " + (scores[2]/total)*100 + "%<br>");
+</script>
+
+<!-- 9. Color array -->
+<script>
+  var colors = ["Red", "Green", "Blue"];
+  document.write("<h3>9. Colors:</h3>" + colors[0] + ", " + colors[1] + ", " + colors[2] + "<br>");
+</script>
+
+<!-- 10. Sort numbers -->
+<script>
+  var marks = [300, 150, 400];
+  marks.sort(function(a, b){ return a - b; });
+  document.write("<h3>10. Sorted Marks:</h3>" + marks[0] + ", " + marks[1] + ", " + marks[2] + "<br>");
+</script>
+
+<!-- 11. Copy cities -->
+<script>
+  var cities = ["Karachi", "Lahore", "Islamabad", "Quetta"];
+  var selected = [cities[0], cities[1], cities[2]];
+  document.write("<h3>11. Selected Cities:</h3>" + selected[0] + ", " + selected[1] + ", " + selected[2] + "<br>");
+</script>
+
+<!-- 12. Join strings -->
+<script>
+  var arr = ["This", " is", " my", " cat"];
+  var joined = arr.join("");
+  document.write("<h3>12. Joined String:</h3>" + joined + "<br>");
+</script>
+
+<!-- 13. FIFO -->
+<script>
+  var fifo = [];
+  fifo.push("item1");
+  fifo.push("item2");
+  var firstOut = fifo.shift();
+  document.write("<h3>13. FIFO:</h3>" + firstOut + "<br>");
+</script>
+
+<!-- 14. LIFO -->
+<script>
+  var lifo = [];
+  lifo.push("item1");
+  lifo.push("item2");
+  var lastOut = lifo.pop();
+  document.write("<h3>14. LIFO:</h3>" + lastOut + "<br>");
+</script>
+
+<!-- 15. Dropdown -->
+<script>
+  var phones = ["Apple", "Samsung", "Motorola", "Nokia", "Sony", "Haier"];
+  document.write("<h3>15. Dropdown Menu:</h3>");
+  document.write("<select>");
+  document.write("<option>" + phones[0] + "</option>");
+  document.write("<option>" + phones[1] + "</option>");
+  document.write("<option>" + phones[2] + "</option>");
+  document.write("<option>" + phones[3] + "</option>");
+  document.write("<option>" + phones[4] + "</option>");
+  document.write("<option>" + phones[5] + "</option>");
+  document.write("</select>");
+</script>
+
+</body>
+</html>
