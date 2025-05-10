@@ -102,7 +102,6 @@ document.write("Upper Case: " + upperCaseInput);
 
 
 
-
 var num = 35.36;
 
 var numStr = num.toString();
@@ -113,20 +112,8 @@ document.write("Original number: " + num + "<br>");
 document.write("Converted to string and without dot: " + numWithoutDot);
 
 
-var username = prompt("Enter your username:");
 
-function isValidUsername(username) {
 
-  var specialChars = ["@", ".", ",", "!"];
-  
-
-  for (var i = 0; i < specialChars.length; i++) {
-    if (username.indexOf(specialChars[i]) !== -1) {
-      return false;
-    }
-  }
-  return true; 
-}
 
 
 
