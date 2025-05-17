@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Function Tasks</title>
+</head>
+<body>
+  <script>
+    // 1. Display current date & time
+    function showDateTime() {
+      document.write("1. Current Date & Time: " + new Date() + "<br><br>");
+    }
+
+    // 2. Greet user with full name
+    function greetUser(firstName, lastName) {
+      alert("2. Hello " + firstName + " " + lastName);
+    }
+
+    // 3. Add two numbers (user input)
+    function addNumbers() {
+      let a = +prompt("3. Enter first number:");
+      let b = +prompt("Enter second number:");
+      return a + b;
+    }
+
+    // 4. Simple calculator
+    function calculator(num1, num2, op) {
+      switch(op) {
+        case '+': return num1 + num2;
+        case '-': return num1 - num2;
+        case '*': return num1 * num2;
+        case '/': return num2 !== 0 ? num1 / num2 : "Divide by 0 error";
+        default: return "Invalid operator";
+      }
+    }
+
+    // 5. Square a number
+    function square(num) {
+      return num * num;
+    }
+
+    // 6. Factorial
+    function factorial(n) {
+      if (n === 0 || n === 1) return 1;
+      return n * factorial(n - 1);
+    }
+
+    // 7. Display counting
+    function count(start, end) {
+      document.write("7. Counting:<br>");
+      for (let i = start; i <= end; i++) {
+        document.write(i + "<br>");
+      }
+    }
+
+    // 8. Hypotenuse using nested function
+    function calculateHypotenuse(base, perpendicular) {
+      function calculateSquare(x) {
+        return x * x;
+      }
+      let hyp = Math.sqrt(calculateSquare(base) + calculateSquare(perpendicular));
+      document.write("<br>8. Hypotenuse: " + hyp.toFixed(2) + "<br><br>");
+    }
+
+    // 9. Area of rectangle
+    function areaOfRectangle(width, height) {
+      return width * height;
+    }
+
+    // 10. Palindrome checker
+    function isPalindrome(str) {
+      let clean = str.toLowerCase().replace(/[^a-z0-9]/g, '');
+      return clean === clean.split('').reverse().join('');
+    }
+
+    // 11. Title case
+    function titleCase(str) {
+      return str.split(' ').map(w => w[0].toUpperCase() + w.slice(1)).join(' ');
+    }
+
+    // 12. Longest word
+    function longestWord(str) {
+      let words = str.split(' ');
+      let longest = words[0];
+      for (let word of words) if (word.length > longest.length) longest = word;
+      return longest;
+    }
+
+    // 13. Count letter occurrences
+    function countLetter(str, letter) {
+      return str.split('').filter(c => c === letter).length;
+    }
+
+    // 14. Circle calculations
+    function calcCircumference(r) {
+      document.write("14. Circumference: " + (2 * Math.PI * r).toFixed(2) + "<br>");
+    }
+    function calcArea(r) {
+      document.write("Area: " + (Math.PI * r * r).toFixed(2) + "<br><br>");
+    }
+
+    // === Call all functions below ===
+    showDateTime();
+    greetUser("Ali", "Ahmed");
+    document.write("3. Sum: " + addNumbers() + "<br><br>");
+    document.write("4. Calculator (10 * 2): " + calculator(10, 2, '*') + "<br><br>");
+    document.write("5. Square of 6: " + square(6) + "<br><br>");
+    document.write("6. Factorial of 5: " + factorial(5) + "<br><br>");
+    count(1, 5);
+    calculateHypotenuse(3, 4);
+    document.write("9. Area (10, 5): " + areaOfRectangle(10, 5) + "<br>");
+    let w = 7, h = 8;
+    document.write("Area (variables): " + areaOfRectangle(w, h) + "<br><br>");
+    alert("10. Palindrome Check: " + (isPalindrome("madam") ? "Yes" : "No"));
+    alert("11. Title Case: " + titleCase("the quick brown fox"));
+    alert("12. Longest Word: " + longestWord("Web Development Tutorial"));
+    alert("13. Letter Count: " + countLetter("JSResourceS.com", "o"));
+    calcCircumference(5);
+    calcArea(5);
+  </script>
+</body>
+</html>

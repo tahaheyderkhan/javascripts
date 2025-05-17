@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Date Methods - JavaScript</title>
+</head>
+<body>
+  <script>
+    // Task 1
+    document.write("1. Current Date & Time: " + new Date() + "<br><br>");
+
+    // Task 2
+    alert("2. Current Month: " + ["January","February","March","April","May","June","July","August","September","October","November","December"][new Date().getMonth()]);
+
+    // Task 3
+    alert("3. Today is: " + ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"][new Date().getDay()]);
+
+    // Task 4
+    if([0,6].includes(new Date().getDay())) alert("4. It’s Fun day");
+
+    // Task 5
+    alert("5. " + (new Date().getDate()<16 ? "First fifteen days of the month" : "Last days of the month"));
+
+    // Task 6
+    document.write("6. Minutes since Jan 1, 1970: " + Math.floor(new Date().getTime()/60000) + "<br><br>");
+
+    // Task 7
+    alert("7. " + (new Date().getHours()<12 ? "It’s AM" : "It’s PM"));
+
+    // Task 8
+    let laterDate = new Date(2020, 11, 31);
+    document.write("8. Later Date: " + laterDate + "<br><br>");
+
+    // Task 9
+    alert("9. " + Math.floor((new Date() - new Date("June 18, 2015")) / (1000*60*60*24)) + " days have passed since 1st Ramadan, 2015");
+
+    // Task 10
+    document.write("10. Seconds since Jan 1, 2015: " + Math.floor((new Date() - new Date("Jan 1, 2015")) / 1000) + "<br><br>");
+
+    // Task 11
+    let d = new Date();
+    d.setHours(d.getHours() + 1);
+    document.write("11. Date 1 hour ahead: " + d + "<br><br>");
+
+    // Task 12
+    let oldDate = new Date();
+    oldDate.setFullYear(oldDate.getFullYear() - 100);
+    alert("12. Date 100 years back: " + oldDate);
+
+    // Task 13
+    let age = prompt("13. Enter your age:");
+    document.write("13. Your birth year is: " + (new Date().getFullYear() - age) + "<br><br>");
+
+    // Task 14 - K-Electric Bill
+    let customerName = "Ali", 
+        currentMonth = ["January","February","March","April","May","June","July","August","September","October","November","December"][new Date().getMonth()],
+        units = 410, 
+        chargePerUnit = 16, 
+        lateCharge = 350, 
+        net = units * chargePerUnit, 
+        gross = net + lateCharge;
+
+    document.write("<h2>14. K-Electric Bill</h2>");
+    document.write("Customer Name: " + customerName + "<br>");
+    document.write("Month: " + currentMonth + "<br>");
+    document.write("Number of Units: " + units + "<br>");
+    document.write("Charges per Unit: " + chargePerUnit + "<br><br>");
+    document.write("Net Amount Payable (within Due Date): " + net.toFixed(2) + "<br>");
+    document.write("Late Payment Surcharge: " + lateCharge.toFixed(2) + "<br>");
+    document.write("Gross Amount Payable (after Due Date): " + gross.toFixed(2));
+  </script>
+</body>
+</html>
